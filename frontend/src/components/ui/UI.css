@@ -1,0 +1,229 @@
+/* User Item Styles */
+.user-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.user-item:hover {
+  background-color: var(--gray-100);
+}
+
+.user-item.selected {
+  background-color: var(--gray-100);
+  border-left: 3px solid var(--primary-color);
+}
+
+.user-item-avatar {
+  position: relative;
+  margin-right: 0.75rem;
+}
+
+.user-item-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--rounded-full);
+  object-fit: cover;
+  box-shadow: var(--shadow-sm);
+}
+
+.status-indicator {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: var(--rounded-full);
+  bottom: 4px;
+  right: -2px;
+  border: 2px solid var(--white);
+  z-index: 1;
+}
+
+.status-indicator.online {
+  background-color: var(--success-color);
+}
+
+.status-indicator.offline {
+  background-color: var(--gray-400);
+}
+
+.user-item-info {
+  flex: 1;
+  overflow: hidden;
+}
+
+.user-item-info h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-item-info p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Message Bubble Styles - WhatsApp-like */
+.message-bubble-container {
+  display: flex;
+  margin-bottom: 0.5rem;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.message-bubble-container.self {
+  justify-content: flex-end;
+}
+
+.message-bubble {
+  max-width: 75%;
+  padding: 0.6rem 0.75rem 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+}
+
+/* Self message bubble - green like WhatsApp */
+.message-bubble.self {
+  background-color: #dcf8c6;
+  color: #303030;
+  margin-right: 8px;
+  border-top-right-radius: 0;
+}
+
+/* Other message bubble - white like WhatsApp */
+.message-bubble.other {
+  background-color: #ffffff;
+  color: #303030;
+  margin-left: 8px;
+  border-top-left-radius: 0;
+}
+
+.message-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.message-time {
+  display: block;
+  font-size: 0.7rem;
+  margin-top: 0.3rem;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* File Attachment Styles */
+.attachment-container {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.attachment-image {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+}
+
+.attachment-video {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+  display: block;
+}
+
+.attachment-name {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 4px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.attachment-file {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.attachment-file:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.file-icon {
+  color: #1976d2;
+  margin-right: 8px;
+  font-size: 2rem !important;
+}
+
+.file-details {
+  flex: 1;
+  overflow: hidden;
+}
+
+.file-name {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-size {
+  display: block;
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.download-icon {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* File upload progress styles */
+.upload-progress {
+  height: 4px;
+  border-radius: 2px;
+  background-color: #e0e0e0;
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+.upload-progress-bar {
+  height: 100%;
+  background-color: #1976d2;
+  transition: width 0.3s ease;
+}
