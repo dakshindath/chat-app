@@ -1,4 +1,3 @@
-```markdown
 # Chat App
 
 This is a full-stack real-time chat application built with **React**, **Node.js**, **Express**, **Socket.IO**, and **MongoDB**. The app supports user authentication, real-time messaging, file uploads, and online/offline user status.
@@ -30,7 +29,6 @@ This is a full-stack real-time chat application built with **React**, **Node.js*
 
 ## Project Structure
 
-```
 chat-app/
 ├── backend/
 │   ├── controllers/       # API controllers
@@ -137,5 +135,3 @@ This project is licensed under the MIT License. See the LICENSE file for details
 - [Socket.IO](https://socket.io/)
 - [MongoDB](https://www.mongodb.com/)
 - [Material-UI](https://mui.com/)
-```
-
